@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Tax\Resources\TaxRegion;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Tax\Models\TaxRegion;
 use JeffersonGoncalves\FilamentCommerce\Tax\CommerceTaxPlugin;
@@ -26,9 +26,9 @@ class TaxRegionResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return TaxRegionForm::configure($schema);
+        return TaxRegionForm::configure($form);
     }
 
     public static function table(Table $table): Table
